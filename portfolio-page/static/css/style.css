@@ -1,0 +1,297 @@
+/*base.html, header and footer, all html inherit this basic layout.*/
+*, *:after, *:before{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+  border:0px solid #0ff;
+  overflow-x:hidden;
+}
+
+nav {
+  /*background-image: url("header3.png");*/
+  background-color:blue;
+  repeat:no-repeat;
+  padding-top:10%;
+  padding-bottom: 0%;
+  background-color: #FFF;
+  border:5 5 5 5 solid yellow;
+
+}
+
+.nav-test {
+
+  background-color:white;
+  /*background-image: url("header3.png");*/
+  padding: 0%;
+  border: none;
+}
+
+a:link{
+  color:white;
+  text-decoration: none;
+}
+
+/*grid system*/
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*="col-"]{
+  float:left;
+  padding: 0px;
+  border:0px solid red;
+  background-color: none;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display:table;
+}
+
+.divider{
+  background-color: purple;
+  padding-top:2%;
+}
+
+.directory-class{
+  color:white;
+  background-color: rgba(255,255,0,.5);
+  text-align: center;
+  float:left;
+  padding:0% 1% 0% 1%;
+  margin:0% 3% 0% 1%;
+  border: 2px solid blue;
+}
+.navbutton-class{
+  color:black;
+  background-color:#fff;
+  float:center;
+  text-align: center ;
+  padding:1% 1% 1% 1%;
+  margin: 0% 0% 0% 0%;
+  border-bottom:2px solid black;
+}
+
+.navbutton-class:hover{
+  background-color:lightblue;
+}
+.navbutton-class::after{
+  background-color: darkblue;
+}
+.navbutton-class:active{
+  background-color:red;
+}
+.purple-background{
+  background-color: purple;
+}
+.contact-text{
+  color:black;
+  padding:0% 0% 0% 0%;
+  text-align:center;
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(75,0,0,.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(75,0,0,.5);
+  box-shadow: 1px 2px 4px rgba(75,0,0,.5);
+  padding: 10px;
+  background: white;
+  margin-top: 5%;
+  border-right:2px black solid ;
+  border-left:2px black solid;
+  font: 1em "Open Sans", sans-serif;
+}
+.contact-span{
+  padding:0% 0% 0% 0%;
+  text-align:center;
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+  padding: 10px;
+  background: white;
+  margin-top: 5%;
+  color:white;
+  z-index:-1;
+  padding:10px;
+  text-align: left;
+  margin-top: 5%;
+  background-color:rgba(0,0,0,.2);
+}
+.contact-header{
+}
+
+.content{
+
+/*background-image: url("tree.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  opacity:.2;
+  margin-top:3%;
+*/
+}
+/*.spacer{
+   height: 100%;
+   width: 100%;
+}*/
+
+header{
+  top:0;
+  z-index:100;
+  position:fixed;
+  width:100%;
+}
+
+.about-header{
+  width:100%;
+  text-align: center;
+}
+
+.info-bubble{
+  margin:1% 1% 1% 1%;
+  padding:1% 1% 1% 1%;
+  border-width: 0px;
+  border-style:solid;
+  border-color:yellow;
+  background-color:lightblue;
+  opacity:.8;
+}
+ul {
+  color:purple;
+  margin-left:0px;
+}
+
+.podcast-project-header{
+  text-align:center;
+  background-color: rgba(0,0,0,.3);/*rgba(95,158,160,.35);*/
+  padding:10%;
+  font-size:300%;
+  text-shadow:4px 4px 10px darkred;
+  color:white;
+}
+.podcast-header-image{
+  background-image:url("on-the-air.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+  padding:6%;
+  background-position:center;
+}
+
+#navbutton-ABOUT:hover{
+  background-color:tomato !important;
+}
+
+#navbutton-SKILLS:hover{
+  background-color:khaki !important;
+}
+
+#navbutton-PROJECTS:hover{
+  background-color:cadetblue !important;
+}
+
+#welcome-container{
+  background-image:url("ds-entry.jpg");
+  background-position:center;
+  background-size:cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:no-repeat;
+  padding-top:5%;
+  margin-top:0%;
+
+
+}
+div[id^="entry-"]{
+  padding:0%;
+  /*margin-bottom:-5%;
+  margin-top:5%;*/
+  text-shadow:0px 3px blue;
+  overflow:auto;
+}
+#entry-1{
+  color:white;
+  text-align:center;
+}
+
+#entry-2{
+  color:white;
+  text-align:center;
+  opacity:1;
+}
+
+#entry-3{
+  color:white;
+  text-align:center;
+}
+.entry-labels{
+  background-color:rgba(126,192,238,.9);
+  margin-bottom:2%;
+}
+.my-image{
+  border-radius:25%;
+  align:top;
+  border: 10px solid rgba(126,192,238,.6);
+}
+
+.picture{
+  background-color:rgba(126,192,238,.6);
+  text-shadow:0px 3px blue;
+
+}
+@media only screen and (max-width: 768px){
+  #about-container{
+    margin-top:6%;
+  }
+}
+
+.breaker{
+  margin:2.5%;
+  border: 3px black solid;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  background-color:black;
+  height:10px;
+  margin-top:1.75%;
+  width:90%;
+}
+img{
+  max-width: 100%;
+}
+
+.about-box{
+  background-color:white;
+  background-image:url("Tanh.png");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-repeat:no-repeat;
+  border:0px 3px 0px 3px solid black;
+
+}
+.about-content{
+  background-color:rgba(255,255,255,.8);
+  
+}

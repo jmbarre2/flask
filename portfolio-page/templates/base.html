@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='img/favico.ico') }}"  />
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+    <script src="{{ url_for('static',filename='settings.js') }}"></script>
+    {% block style %}{% endblock %}
+  </head>
+
+  <body>
+    <header>
+      <div class="row">
+          {% for folder in folders %}
+            <div class="col-4" id="button-group">
+            <a href= "#{{folder.lower()}}"><h3 class="navbutton-class" id="navbutton-{{folder}}" name="navbutton-group">{{ folder }}</h3></a>
+            </div>
+          {% endfor %}
+      </div>
+    </header>
+    <div class="content" id="content">
+    </div>
+    <footer>
+      <div class="row ">
+        <div class="col-2 contact-span">
+          <span></span>
+        </div>
+        <div class="col-8 contact-text">
+          &copy; copyright 2017 James Barrett
+        </div>
+        <div class="col-2 contact-span" >
+          <span></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>
